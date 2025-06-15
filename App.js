@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
+import SpurtScreen from './screens/SpurtScreen';
+import LibraryScreen from './screens/LibraryScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +14,9 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Spurt" component={SpurtScreen} />
+          <Stack.Screen name="Library" component={LibraryScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
