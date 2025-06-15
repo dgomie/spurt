@@ -1,7 +1,7 @@
-import { TextInput, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 function HomeScreen() {
-  return <View><TextInput />Spurt</View>;
+  return <View><Text>Spurt</Text></View>;
 }
 
 export default HomeScreen;
