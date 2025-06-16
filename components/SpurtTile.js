@@ -1,9 +1,9 @@
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from 'react-native';
 
 function SpurtTile() {
   return <Text>Spurt Tile</Text>;
 }
 
-export default SpurtTile
+export default SpurtTile;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
