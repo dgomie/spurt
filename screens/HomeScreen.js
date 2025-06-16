@@ -1,13 +1,13 @@
 import { Text, View, StyleSheet } from 'react-native';
 import SpurtTile from '../components/SpurtTile';
 
-function HomeScreen() {
-  const exerciseDummyData = {
-    title: 'exercise title',
-    time: 'time to complete',
-    icon: 'workout icon',
-  };
+const exerciseDummyData = {
+  title: 'exercise title',
+  time: 'time to complete',
+  icon: 'workout icon',
+};
 
+function HomeScreen() {
   function onPressHandler() {
     console.log('Pressed');
   }
