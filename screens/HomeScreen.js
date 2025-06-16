@@ -4,7 +4,8 @@ import SpurtTile from '../components/SpurtTile';
 function HomeScreen() {
   return (
     <View>
-      <Text>Spurt Home Screen</Text>
+      <Text>Welcome Back</Text>
+      <Text style={styles.header}>Today's Spurts</Text>
       <SpurtTile />
     </View>
   );
@@ -12,4 +13,10 @@ function HomeScreen() {
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  header: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+})
