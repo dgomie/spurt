@@ -8,7 +8,7 @@ function SpurtTile() {
       </View>
       <View style={styles.exerciseInfo}>
         <Text style={styles.title}>Exercise Title</Text>
-        <Text>Time to Complete</Text>
+        <Text style={styles.time}>Time to Complete</Text>
       </View>
     </View>
   );
@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     color: '#233D4D',
   },
-  exerciseInfo: {
-    
+  time: {
+    color: '#233D4D',
   },
+  exerciseInfo: {},
 });
