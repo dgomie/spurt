@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 function HomeScreen() {
   return (
@@ -9,3 +9,5 @@ function HomeScreen() {
 }
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({})
