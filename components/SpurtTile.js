@@ -1,16 +1,21 @@
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, Pressable } from 'react-native';
 
-function SpurtTile() {
+function SpurtTile({ exercise, onPressHandler }) {
   return (
-    <View style={styles.mainContainer}>
-      <View>
-        <Text>Exercise Icon</Text>
+    <Pressable
+      style={({ pressed }) => [styles.pressable, pressed && styles.pressed]}
+      onPress={onPressHandler}
+    >
+      <View style={styles.mainContainer}>
+        <View>
+          <Text>{exercise.icon}</Text>
+        </View>
+        <View style={styles.exerciseInfo}>
+          <Text style={styles.title}>{exercise.title}</Text>
+          <Text style={styles.time}>{exercise.time}</Text>
+        </View>
       </View>
-      <View style={styles.exerciseInfo}>
-        <Text style={styles.title}>Exercise Title</Text>
-        <Text style={styles.time}>Time to Complete</Text>
-      </View>
-    </View>
+    </Pressable>
   );
 }
 
@@ -39,6 +44,12 @@ const styles = StyleSheet.create({
   },
   time: {
     color: '#233D4D',
+  },
+  pressable: {
+    borderRadius: 24,
+  },
+  pressed: {
+    opacity: 0.7,
   },
   exerciseInfo: {},
 });
