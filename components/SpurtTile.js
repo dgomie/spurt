@@ -7,7 +7,7 @@ function SpurtTile({ exercise, onPressHandler }) {
       onPress={onPressHandler}
     >
       <View style={styles.mainContainer}>
-        <View>
+        <View style={styles.innerContainer}>
           <Text>{exercise.icon}</Text>
         </View>
         <View style={styles.exerciseInfo}>
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FE7F2D',
     padding: 16,
-    gap: 16,
+    // gap: 16,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
@@ -50,5 +50,10 @@ const styles = StyleSheet.create({
   pressed: {
     opacity: 0.7,
   },
-  exerciseInfo: {},
+  innerContainer: {
+    margin: 12,
+  },
+  exerciseInfo: {
+    margin: 12,
+  },
 });

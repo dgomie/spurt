@@ -3,9 +3,9 @@ import { Text, View, StyleSheet } from 'react-native';
 function DateWeatherTile() {
   return (
     <View style={styles.mainContainer}>
-      <Text>Date</Text>
-      <Text>Weather Icon</Text>
-      <Text>Weather Temp</Text>
+      <Text style={styles.data}>Date</Text>
+      <Text style={styles.data}>Weather Icon</Text>
+      <Text style={styles.data}>Weather Temp</Text>
     </View>
   );
 }
@@ -19,11 +19,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#A1C181',
     padding: 16,
-    // Removed unsupported 'gap' property. Use margin on child elements instead.
     borderTopLeftRadius: 24,
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 24,
     margin: 24,
   },
+
+  data: {
+    margin: 12
+  }
 });
