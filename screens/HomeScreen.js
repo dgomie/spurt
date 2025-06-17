@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet } from 'react-native';
 import SpurtTile from '../components/SpurtTile';
+import DateWeatherTile from '../components/DateWeatherTile';
 
 const exerciseDummyData = {
   title: 'exercise title',
@@ -14,6 +15,7 @@ function HomeScreen() {
   return (
     <View>
       <Text>Welcome Back</Text>
+      <DateWeatherTile />
       <Text style={styles.header}>Today's Spurts</Text>
       <SpurtTile exercise={exerciseDummyData} onPressHandler={onPressHandler} />
     </View>
