@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#A1C181',
     padding: 16,
-    gap: 12,
+    // Removed unsupported 'gap' property. Use margin on child elements instead.
     borderTopLeftRadius: 24,
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
