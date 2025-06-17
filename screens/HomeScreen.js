@@ -15,6 +15,7 @@ function HomeScreen() {
   return (
     <View>
       <Text>Welcome Back</Text>
+      <Text style={styles.header}>Current Weather</Text>
       <DateWeatherTile />
       <Text style={styles.header}>Today's Spurts</Text>
       <SpurtTile exercise={exerciseDummyData} onPressHandler={onPressHandler} />
