@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FE7F2D',
     padding: 16,
-    // gap: 16,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
