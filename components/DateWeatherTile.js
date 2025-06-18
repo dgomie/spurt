@@ -7,12 +7,14 @@ function DateWeatherTile() {
 
   if (loading) return <ActivityIndicator size="large" />;
 
+  const currentDate = new Date().toLocaleDateString();
+  
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.data}>Date</Text>
-      <Text style={styles.data}>Current Temp: {weather?.main?.temp}°F</Text>
+      <Text style={styles.data}>{currentDate}</Text>
+      <Text style={styles.data}>Current Temp: {Math.round(weather?.main?.temp)}°F</Text>
       <Text style={styles.data}>
-        Condition: {weather?.weather[0]?.description}
+        {weather?.weather[0]?.description}
       </Text>
     </View>
   );
@@ -35,6 +37,6 @@ const styles = StyleSheet.create({
   },
 
   data: {
-    margin: 12,
+    margin: 8,
   },
 });
