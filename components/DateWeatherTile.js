@@ -6,13 +6,15 @@ function DateWeatherTile() {
   const { weather, loading } = useWeather();
 
   if (loading) return <ActivityIndicator size="large" />;
-  console.log(weather)
+  console.log(weather);
 
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.data}>Date</Text>
-      <Text>Current Temp: {weather?.main?.temp}°C</Text>
-      <Text>Condition: {weather?.weather[0]?.description}</Text>
+      <Text style={styles.data}>Current Temp: {weather?.main?.temp}°F</Text>
+      <Text style={styles.data}>
+        Condition: {weather?.weather[0]?.description}
+      </Text>
     </View>
   );
 }
