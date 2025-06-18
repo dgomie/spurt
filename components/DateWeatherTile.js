@@ -12,9 +12,11 @@ function DateWeatherTile() {
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.data}>{currentDate}</Text>
-      <Text style={styles.data}>Current Temp: {Math.round(weather?.main?.temp)}°F</Text>
       <Text style={styles.data}>
-        {weather?.weather[0]?.description}
+        Current Temp: {weather?.main?.temp !== undefined ? Math.round(weather.main.temp) : "N/A"}°F
+      </Text>
+      <Text style={styles.data}>
+        {weather?.weather[0]?.description || "No description available"}
       </Text>
     </View>
   );
