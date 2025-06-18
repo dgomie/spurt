@@ -12,7 +12,7 @@ export async function getWeather() {
     const { latitude, longitude } = location.coords;
 
     const API_KEY = Constants.expoConfig?.extra?.openWeatherApiKey;
-    console.log('key', API_KEY);
+
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${API_KEY}`;
 
     const response = await fetch(url);

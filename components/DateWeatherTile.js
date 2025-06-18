@@ -6,7 +6,6 @@ function DateWeatherTile() {
   const { weather, loading } = useWeather();
 
   if (loading) return <ActivityIndicator size="large" />;
-  console.log(weather);
 
   return (
     <View style={styles.mainContainer}>
