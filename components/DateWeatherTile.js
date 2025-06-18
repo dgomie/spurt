@@ -1,11 +1,18 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ActivityIndicator } from 'react-native';
+import React from 'react';
+import useWeather from '../hooks/useWeather';
 
 function DateWeatherTile() {
+  const { weather, loading } = useWeather();
+
+  if (loading) return <ActivityIndicator size="large" />;
+  console.log(weather)
+
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.data}>Date</Text>
-      <Text style={styles.data}>Weather Icon</Text>
-      <Text style={styles.data}>Weather Temp</Text>
+      <Text>Current Temp: {weather?.main?.temp}°C</Text>
+      <Text>Condition: {weather?.weather[0]?.description}</Text>
     </View>
   );
 }
@@ -27,6 +34,6 @@ const styles = StyleSheet.create({
   },
 
   data: {
-    margin: 12
-  }
+    margin: 12,
+  },
 });
