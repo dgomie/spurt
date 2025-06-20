@@ -1,4 +1,4 @@
-export const exerises = [
+export const exercises = [
   // === Indoor ===
   {
     id: 1,
