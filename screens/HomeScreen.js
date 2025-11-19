@@ -13,8 +13,7 @@ function HomeScreen() {
     console.log('Pressed');
   }
   return (
-    <View>
-      <Text>Welcome Back</Text>
+    <View style={styles.mainContainer}>
       <Text style={styles.header}>Current Weather</Text>
       <DateWeatherTile />
       <Text style={styles.header}>Today's Spurts</Text>
@@ -31,4 +30,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  mainContainer: {
+    marginTop: 15,
+  }
 });
